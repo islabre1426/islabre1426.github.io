@@ -1,0 +1,209 @@
+/* || Fira Code Font support */
+code {
+    font-family: 'Fira Code', monospace;
+}
+
+@supports (font-variation-settings: normal) {
+    code {
+        font-family: 'Fira Code VF', monospace;
+    }
+}
+
+/* || General styling */
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Fira Code';
+
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #333333;
+    color: #ffffff;
+
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+.terminal {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+
+    margin: 20px;
+
+    overflow: hidden;
+}
+
+p {
+    margin: 5px;
+}
+
+/* || Menu */
+.menu {
+    display: flex;
+
+    height: 30px;
+    width: 100%;
+
+    padding: 0 8px;
+    padding-left: 0;
+
+    background-color: #3c3c3c;
+
+    user-select: none;
+}
+
+.menu-icon {
+    display: flex;
+    align-items: center;
+
+    margin: 0 5px;
+}
+
+.title {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: inherit;
+
+    margin: 0 5px;
+
+    text-decoration: none;
+}
+
+/* Button */
+.button {
+    display: flex;
+    align-items: center;
+}
+
+.icon-minimize:hover, .icon-expand:hover {
+    background-color: #565656;
+    cursor: pointer;
+
+    transition: background 0.3s ease;
+}
+
+.icon-close:hover {
+    background-color: #e00015;
+    cursor: pointer;
+
+    transition: background 0.3s ease;
+}
+
+/* || Window */
+.window {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    width: 100%;
+    padding: 8px;
+
+    background-color: #1e1e1e;
+
+    overflow: auto;
+    cursor: text;
+}
+
+/* Scroll Bar */
+.window::-webkit-scrollbar-track {
+    background-color: inherit;
+}
+
+.window::-webkit-scrollbar {
+    width: 8px;
+}
+
+.window::-webkit-scrollbar-thumb {
+    background-color: #444444;
+}
+
+/* Helping message */
+.command {
+    color: #c29a1f;
+}
+
+.text {
+    color: #ffffff;
+    padding-left: 2em;
+}
+
+/* || Input */
+.type, .type2 {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    background-color: unset;
+    color: inherit;
+
+    border: none;
+    outline: none;
+
+    width: 100%;
+    padding: 0 5px;
+    font-size: 16px;
+}
+
+/* Prompt String */
+.path {
+    color: #f2d32b;
+}
+
+.position {
+    color: #b83d55;
+    padding: 0 10px;
+}
+
+.prompt {
+    color: #39bd79;
+    padding-left: 3px;
+}
+
+.user {
+    color: #2f866b;
+}
+
+/* Message event after entered command */
+.success {
+    color: #39bd79;
+}
+
+.error {
+    color: #f17f6d;
+}
+
+h1 {
+    font-size: 16px;
+    padding: 0 5px;
+}
+
+/* Hide title when below defined width */
+@media (max-width: 420px) {
+    .title {
+        display: none;
+    }
+
+    /* Put a space between menu, so the menu-icon and button will still be in their position */
+    .menu {
+        justify-content: space-between;
+    }
+}
