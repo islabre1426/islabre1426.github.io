@@ -122,9 +122,15 @@ a {
     cursor: text;
 }
 
-/* Scroll Bar */
+/* ||** Scroll Bar */
+/* Support for Firefox */
+.window {
+    scrollbar-width: thin;
+}
+
+/* Support for Chrome, Edge, Opera, etc. */
 .window::-webkit-scrollbar-track {
-    background-color: inherit;
+    background-color: #1b1b1c;
 }
 
 .window::-webkit-scrollbar {
@@ -132,10 +138,10 @@ a {
 }
 
 .window::-webkit-scrollbar-thumb {
-    background-color: #444444;
+    background-color: #747475;
 }
 
-/* Helping message */
+/* ||** Helping message */
 .command {
     color: #c29a1f;
 }
@@ -163,7 +169,7 @@ input {
     font-size: 16px;
 }
 
-/* Prompt String */
+/* ||** Prompt String */
 .path {
     color: #f2d32b;
 }
@@ -182,7 +188,7 @@ input {
     color: #2f866b;
 }
 
-/* Message event after entered command */
+/* ||** Message event after entered command */
 .success {
     color: #39bd79;
 }
@@ -196,7 +202,7 @@ h1 {
     padding: 0 5px;
 }
 
-/* Hide title when below defined width */
+/* || Hide title when below defined width */
 @media (max-width: 420px) {
     .title {
         display: none;
