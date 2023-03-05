@@ -1,6 +1,6 @@
 ![Introduction](./assets/img/Introduction.png)
 
-<h1 style="text-align: center;">islabre1426.github.io</h1>
+<h1 align="center">islabre1426.github.io</h1>
 
 ## What's this?
 This is my Terminal-based Portfolio, mostly for showcasing my works,  skills to the world, and my passion about the Terminal.
