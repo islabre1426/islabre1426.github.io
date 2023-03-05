@@ -142,13 +142,18 @@ a {
 }
 
 /* ||** Helping message */
+table {
+    padding-left: 3px;
+}
+
 .command {
     color: #c29a1f;
+    width: 20%;
 }
 
 .text {
     color: #ffffff;
-    padding-left: 2em;
+    /* padding-left: 2em; */
 }
 
 /* || Input */
@@ -202,8 +207,15 @@ h1 {
     padding: 0 5px;
 }
 
-/* || Hide title when below defined width */
+/* || Media Responsive */
 @media (max-width: 420px) {
+    /* When below defined width: */
+    /* - Increase table data width */
+    .command {
+        width: 30%;
+    }
+
+    /* - Hide title */
     .title {
         display: none;
     }

@@ -66,6 +66,7 @@ function getInputValue() {
     } else if (inputElementValue === 'clear') {
         document.querySelectorAll('p').forEach(element => element.parentNode.removeChild(element));
         document.querySelectorAll('section').forEach(element => element.parentNode.removeChild(element));
+        document.querySelectorAll('table').forEach(element => element.parentNode.removeChild(element));
 
     } else {
         falseValue(inputElementValue);
@@ -156,17 +157,21 @@ function createText(text) {
 };
 
 function createCode(code, text) {
-    const pElement = document.createElement('p');
-    const spanElement = document.createElement('span');
+    const tableElement = document.createElement('table');
+    const trElement = document.createElement('tr');
+    const tdElementCommand = document.createElement('td');
+    const tdElementText = document.createElement('td');
 
-    pElement.setAttribute('class', 'command');
-    spanElement.setAttribute('class', 'text');
+    tdElementCommand.setAttribute('class', 'command');
+    tdElementText.setAttribute('class', 'text');
 
-    pElement.innerHTML = `${code}<br>`;
-    spanElement.textContent = text;
+    tdElementCommand.textContent = code;
+    tdElementText.textContent = text;
 
-    pElement.appendChild(spanElement);
-    windowElement.appendChild(pElement);
+    trElement.appendChild(tdElementCommand);
+    trElement.appendChild(tdElementText);
+    tableElement.appendChild(trElement);
+    windowElement.appendChild(tableElement);
 };
 
 loadTerminal();
