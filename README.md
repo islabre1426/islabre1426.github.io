@@ -3,7 +3,7 @@
 ![Introduction](./assets/img/Introduction.png)
 
 # What's this?
-This is my Terminal-based Portfolio, mostly for showcasing my works, skills to the world, and my passion about the Terminal.
+This is my Terminal-based Portfolio, mostly for showcasing my works and my skills to the world.
 
 # Why Terminal-based?
 I work with the terminal a lot since this is what many programmers use to develop.
@@ -15,7 +15,6 @@ I think it is a good idea to develop a Portfolio based on it.
 - Testing website: Chrome, Firefox.
 - Publishing website: Github Pages.
 - Version controlling: Git.
-- Image Capturing: ShareX.
 
 # License:
 - This source-code is under [MIT License](./LICENSE).
